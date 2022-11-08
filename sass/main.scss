@@ -1,0 +1,48 @@
+/* переменные */
+@import './utils/vars';
+
+/* modern-normalize */
+@import './base/normalize';
+
+/* body / section / container */
+@import './base/base';
+
+/* reset css */
+@import './base/reset';
+
+/* visually-hidden */
+@import './base/visually-hidden';
+
+/* logo */
+@import './components/logo';
+
+/* header / nav */
+@import './components/header';
+
+/* hero section */
+@import './components/hero';
+
+/* feature section */
+@import './components/feature';
+
+/* work section */
+@import './components/work';
+
+/* team section */
+@import './components/team';
+
+/* clients section */
+@import './components/clients';
+
+/* footer / form */
+@import './components/footer';
+
+/* backdrop */
+@import './components/backdrop';
+
+/* portfolio.html */
+@import './components/portfolio';
+
+
+
+

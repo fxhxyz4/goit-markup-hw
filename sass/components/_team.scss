@@ -1,0 +1,77 @@
+.team {
+    color: var(--proj-category);
+    background-color: var(--sectbg-color);
+}
+
+.team__title {
+    margin-bottom: 50px;
+    color: var(--a-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+}
+
+.team__list {
+    display: flex;
+    gap: 30px;
+}
+
+.team__text,
+.team__desc {
+    font-size: 16px;
+    line-height: 1.189;
+}
+.team__text {
+    color: var(--a-color);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.team__desc {
+    color: var(--proj-category);
+    margin-bottom: 16px;
+}
+
+.team__div {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.team__item {
+    background-color: var(--navbg-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.icon__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--svgcolor);
+    transition: color var(--duration) var(--cubic-bezier), 
+    background-color var(--duration) var(--cubic-bezier);
+}
+
+.icon__item {
+    transition: fill var(--duration) var(--cubic-bezier);
+    fill: currentColor;
+}
+
+.icon__link:hover,
+.icon__link:focus {
+    background-color: var(--raleway-color);
+    color: var(--navbg-color);
+}

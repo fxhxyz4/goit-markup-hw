@@ -1,0 +1,35 @@
+.feature {
+    padding-top: 94px;
+    padding-bottom: 0;
+}
+
+.feature__title {
+    color: var(--a-color);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.14;
+    margin-bottom: 10px;
+}
+
+.feature__desc {
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--proj-category);
+}
+
+.feature__list {
+    display: flex;
+    gap: 30px;
+}
+
+.feature__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    background-color: var(--sectbg-color);
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
