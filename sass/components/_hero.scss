@@ -42,8 +42,8 @@
     min-width: 215px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     transition: background-color var(--duration) var(--cubic-bezier);
-}
 
-.hero__btn:hover {
-    background-color: var(--btnhover-color);
+    &:hover {
+        background-color: var(--btnhover-color);
+    }
 }

@@ -16,7 +16,7 @@
     margin-bottom: 50px;
 }
 
-.client__img {
+.client__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,12 +30,13 @@
     border var(--duration) var(--cubic-bezier);
 }
 
-.client__img {
+.client__link {
     fill: currentColor;
+
+    &:focus,
+    &:hover {
+        color: var(--raleway-color);
+        border: 1px solid var(--raleway-color);
+    }
 }
 
-.client__img:hover,
-.client__img:focus {
-    color: var(--raleway-color);
-    border: 1px solid var(--raleway-color);
-}

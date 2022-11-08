@@ -53,6 +53,11 @@
     gap: 10px;
 }
 
+.icon__item {
+    transition: fill var(--duration) var(--cubic-bezier);
+    fill: currentColor;
+}
+
 .icon__link {
     display: flex;
     align-items: center;
@@ -63,15 +68,11 @@
     color: var(--svgcolor);
     transition: color var(--duration) var(--cubic-bezier), 
     background-color var(--duration) var(--cubic-bezier);
+
+    &:focus,
+    &:hover {
+        background-color: var(--raleway-color);
+        color: var(--navbg-color);
+    }
 }
 
-.icon__item {
-    transition: fill var(--duration) var(--cubic-bezier);
-    fill: currentColor;
-}
-
-.icon__link:hover,
-.icon__link:focus {
-    background-color: var(--raleway-color);
-    color: var(--navbg-color);
-}
