@@ -53,7 +53,7 @@
     gap: 10px;
 }
 
-.icon__item {
+.icon__link {
     transition: fill var(--duration) var(--cubic-bezier);
     fill: currentColor;
 }
@@ -75,4 +75,3 @@
         color: var(--navbg-color);
     }
 }
-

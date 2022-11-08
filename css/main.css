@@ -577,7 +577,7 @@ header.header {
   gap: 10px;
 }
 
-.icon__item {
+.icon__link {
   transition: fill var(--duration) var(--cubic-bezier);
   fill: currentColor;
 }
@@ -731,7 +731,7 @@ header.header {
   gap: 10px;
 }
 
-.footer-icon__item {
+.footer-icon__link {
   fill: currentColor;
 }
 
