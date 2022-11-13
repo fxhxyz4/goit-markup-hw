@@ -1,0 +1,69 @@
+.client__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include desktop {
+        flex-wrap: nowrap;
+    }
+}
+
+.client__item {
+    flex-basis: calc((100% - 30px) / 2);
+
+    @include tablet {
+        flex-basis: calc((100% - 30px) / 4);
+    }
+}
+
+.client__title {
+    text-align: center;
+    color: $a-color;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 0.8;
+    margin-bottom: 50px;
+
+    @include mobile {
+        margin-bottom: 30px;
+    }
+
+    @include desktop {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
+}
+
+.client__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 92px;
+    color: $svgcolor;
+    border: 1px solid $svgcolor;
+    border-radius: 4px;
+    padding: 16px 32px;
+    transition: color $duration $cubic-bezier,
+    border $duration $cubic-bezier;
+
+    @include tablet {
+        width: 226px;
+    }
+
+    @include desktop {
+        width: 170px;
+    }
+
+}
+
+.client__link {
+    fill: currentColor;
+
+    &:focus,
+    &:hover {
+        color: $raleway-color;
+        border: 1px solid $raleway-color;
+    }
+}
+

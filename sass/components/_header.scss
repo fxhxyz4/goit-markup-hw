@@ -1,0 +1,174 @@
+.header__container {
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    @include tablet {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    @include desktop {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+.header__nav {
+    // display: flex;
+    // align-items: center;
+
+    display: none;
+    @include tablet {
+        display: flex;
+        align-items: baseline;
+        // margin-left: 15px;
+    }
+}
+
+header.header {
+    border-bottom: 1px solid $navborder-color;
+}
+
+.header__list-link {
+    position: relative;
+    color: $a-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    font-style: normal;
+    transition: color $duration $cubic-bezier;
+
+    &:focus,
+    &:hover {
+        color: $raleway-color;
+    }
+}
+
+.header__list-link--current {
+    color: $raleway-color;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: $raleway-color;
+        border-radius: 2px;
+    }
+}
+
+.header__list {
+    display: flex;
+    margin-left: 93px;
+
+    @include tablet {
+        margin-left: 88px;
+    }
+
+    @include desktop {
+        margin-left: 93px;
+    }
+}
+
+.header__list .header__list-item {
+    margin-right: 50px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.header__list .header__list-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.header-contact {
+    margin-left: auto;
+
+    display: none;
+    @include tablet {
+        display: block;
+    }
+
+    @include desktop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.header-contact .header-contact__item {
+    margin-right: 0;
+    margin-left: 50px;
+}
+
+.header-contact__link {
+    color: $proj-category;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    font-style: normal;
+    transition: color $duration $cubic-bezier;
+
+    &:focus,
+    &:hover {
+        color: $raleway-color;
+    }
+
+    @include tablet {
+        font-size: 12px;
+        line-height: 1.16;
+    }
+
+    @include desktop {
+        font-size: 14px;
+    }
+}
+
+.header-contact .header-contact__link {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    @include desktop {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}
+
+.header-contact__icon {
+    margin-right: 10px;
+    transition: fill $duration $cubic-bezier;
+    fill: currentColor;
+
+    &:focus,
+    &:hover {
+        fill: $raleway-color;
+    }
+}
+
+.icon-menu {
+    border: none;
+    background-color: $navgb-color;
+    margin-left: auto;
+    fill: currentColor;
+    transition: fill $duration $cubic-bezier;
+    
+    &:focus,
+    &:hover {
+        fill: $raleway-color;
+    }
+    @include tablet {
+        display: none;
+    }
+}

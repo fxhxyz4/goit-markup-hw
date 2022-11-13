@@ -1,0 +1,48 @@
+.work__div {
+    position: relative;
+}
+.work__text {
+    color: $navgb-color;
+    background-color: $work-bg;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 27px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+}
+
+.work__title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    color: $a-color;
+}
+
+.work__list {
+    display: flex;
+    gap: 30px;
+}
+
+.work__item {
+    width: calc((100% - 60px) / 3);
+}
+
+.work__img {
+    max-width: 100%;
+    height: auto;
+}
+
+.work {
+    display: none;
+
+    @include desktop {
+        display: block;
+    }
+}
