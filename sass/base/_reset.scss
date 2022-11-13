@@ -24,4 +24,11 @@ a {
 
 img {
     display: block;
+    user-select: none;
+    -moz-user-select: none;
+}
+
+svg {
+    user-select: none;
+    -moz-user-select: none;
 }

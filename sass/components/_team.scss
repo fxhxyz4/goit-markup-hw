@@ -1,19 +1,26 @@
 .team {
-    color: var(--proj-category);
-    background-color: var(--sectbg-color);
+    color: $proj-category;
+    background-color: $sectbg-color;
 }
 
 .team__title {
-    margin-bottom: 50px;
-    color: var(--a-color);
+    margin-bottom: 30px;
+    color: $a-color;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.16;
     text-align: center;
+
+    @include desktop {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
 }
 
 .team__list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
 }
 
@@ -23,13 +30,13 @@
     line-height: 1.189;
 }
 .team__text {
-    color: var(--a-color);
+    color: $a-color;
     font-weight: 500;
     margin-bottom: 10px;
 }
 
 .team__desc {
-    color: var(--proj-category);
+    color: $proj-category;
     margin-bottom: 16px;
 }
 
@@ -37,13 +44,23 @@
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
+
 }
 
 .team__item {
-    background-color: var(--navbg-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: $navgb-color;
+    box-shadow: $team-shadow;
     border-radius: 0px 0px 4px 4px;
+
+    @include tablet {
+        width: calc((100% - (1 * 30px)) / 2);
+        margin-bottom: 0px;
+    }
+
+    @include desktop {
+        width: calc((100% - (3 * 30px)) / 4);
+        margin-bottom: 0px;
+    }
 }
 
 .icon__list {
@@ -54,7 +71,7 @@
 }
 
 .icon__link {
-    transition: fill var(--duration) var(--cubic-bezier);
+    transition: fill $duration $cubic-bezier;
     fill: currentColor;
 }
 
@@ -65,13 +82,35 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    color: var(--svgcolor);
-    transition: color var(--duration) var(--cubic-bezier), 
-    background-color var(--duration) var(--cubic-bezier);
+    color: $svgcolor;
+    transition: color $duration $cubic-bezier, 
+    background-color $duration $cubic-bezier;
 
     &:focus,
     &:hover {
-        background-color: var(--raleway-color);
-        color: var(--navbg-color);
+        background-color: $raleway-color;
+        color: $navgb-color;
     }
+}
+
+.team__item {
+    margin-bottom: 30px;
+    // &:last-child {
+    //     margin-bottom: 0;
+    // }
+}
+
+.team__img {
+    width: 100%;
+    height: auto;
+
+    // @include tablet {
+    //     width: 354px;
+    //     height: 374px;
+    // }
+
+    // @include desktop {
+    //     width: 270px;
+    //     height: 260px;
+    // }
 }

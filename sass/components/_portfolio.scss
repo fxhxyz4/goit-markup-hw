@@ -1,30 +1,44 @@
 .portfolio__btn {
-    color: var(--a-color);
-    background-color: var(--sectbg-color);
+    color: $a-color;
+    background-color: $sectbg-color;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
     border-color: transparent;
     border-radius: 4px;
     padding: 6px 25px;
-    transition: color var(--duration) var(--cubic-bezier),
-    background-color var(--duration) var(--cubic-bezier),
-    box-shadow var(--duration) var(--cubic-bezier);
+    transition: color $duration $cubic-bezier,
+    background-color $duration $cubic-bezier,
+    box-shadow $duration $cubic-bezier;
 
     &:focus, 
     &:hover {
-        background-color: var(--raleway-color);
-        color: var(--navbg-color);
+        background-color: $raleway-color;
+        color: $navgb-color;
         box-shadow: 0px 3px 1px rgba(138, 107, 107, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     }
 }
 
 .portfolio__list {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
     list-style: none;
     gap: 8px;
+    margin-bottom: 40px;
+    max-width: 350px;
+
+    @include tablet {
+        max-width: none;
+        justify-content: center;
+    }
+
+    @include desktop {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        max-width: none;
+        flex-wrap: nowrap;
+    }
 }
 
 .project-list__div {
@@ -38,18 +52,30 @@
     left: 0;
     font-size: 18px;
     line-height: 1.56;
-    color: var(--navbg-color);
-    background-color: var(--portfolio-w);
+    color: $navgb-color;
+    background-color: $portfolio-w;
     padding: 63px 24px;
     transform: translateY(100%);
-    transition: transform var(--duration) var(--cubic-bezier);
+    transition: transform $duration $cubic-bezier;
     overflow: auto;
+    
+    @include mobile {
+        width: 450px;
+    }
+
+    @include tablet {
+        width: 354px;
+    }
+
+    @include desktop {
+        width: 370px;
+    }
 }
 
 .project-list__link {
     display: block;
-    background-color: var(--navbg-color);
-    transition: box-shadow var(--duration) var(--cubic-bezier);
+    background-color: $navgb-color;
+    transition: box-shadow $duration $cubic-bezier;
 
     &:hover .project-list__text,
     &:focus .project-list__text {
@@ -65,35 +91,50 @@
 .project-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 30px;
+
+    @include tablet {
+        justify-content: space-between;
+    }
 }
 
 .project-list__item {
-    background-color: var(--navbg-color);
-    flex-basis: calc((100% - 60px) / 3);
+    background-color: $navgb-color;
+    flex-basis: calc((100% - 60px) / 2);
+
+    @include desktop {
+        flex-basis: calc((100% - 60px) / 4);
+    }
 }
 
 .project {
     padding: 20px 24px;
-    width: 370px;
-    border-left: 1px solid var(--proj-border-color);
-    border-right: 1px solid var(--proj-border-color);
-    border-bottom: 1px solid var(--proj-border-color);
-}
+    width: 450px;
+    border-left: 1px solid $proj-border-color;
+    border-right: 1px solid $proj-border-color;
+    border-bottom: 1px solid $proj-border-color;
 
+    @include tablet {
+        width: 354px;
+    }
+
+    @include desktop {
+        width: 370px;
+    }
+}
 
 .project__title {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    color: var(--a-color);
+    color: $a-color;
     margin-bottom: 4px;
 }
 
 .project__desc {
     font-size: 16px;
     line-height: 1.88;
-    color: var(--proj-category);
+    color: $proj-category;
 }

@@ -2,8 +2,8 @@
     position: relative;
 }
 .work__text {
-    color: var(--navbg-color);
-    background-color: rgba(47, 48, 58, 0.8);
+    color: $navgb-color;
+    background-color: $work-bg;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -22,7 +22,7 @@
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
-    color: var(--a-color);
+    color: $a-color;
 }
 
 .work__list {
@@ -32,4 +32,17 @@
 
 .work__item {
     width: calc((100% - 60px) / 3);
+}
+
+.work__img {
+    max-width: 100%;
+    height: auto;
+}
+
+.work {
+    display: none;
+
+    @include desktop {
+        display: block;
+    }
 }

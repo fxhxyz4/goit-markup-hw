@@ -1,25 +1,37 @@
 .footer {
-    background-color: var(--bgmain-color);
+    background-color: $bgmain-color;
     padding-top: 60px;
     padding-bottom: 60px;
 }
 
 .footer__container {
-    display: flex;
-    align-items: center;
-    align-items: baseline;
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-around;
+    }
 }
 
 .footer__list {
-    margin-bottom: 0;
-    padding-bottom: 0px;
+    margin-bottom: 60px;
+
+    @include desktop {
+        margin-bottom: 0;
+        padding-bottom: 0px;
+    }
 }
 
 .footer__item {
     margin-bottom: 9px;
-
+    text-align: center;
     &:last-child {
         margin-bottom: 0;
+    }
+
+    @include desktop {
+        text-align: start;
     }
 }
 
@@ -27,34 +39,51 @@
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
-    color: var(--footer-color);
+    color: $footer-color;
     display: block;
-    transition: color var(--duration) var(--cubic-bezier);
+    transition: color $duration $cubic-bezier;
 
     &:focus,
     &:hover {
-        color: var(--raleway-color);
+        color: $raleway-color;
     }
 }
 
 .footer__logo {
     display: block;
-    color: var(--navbg-color);
+    color: $navgb-color;
     margin-bottom: 20px;
     font-style: normal;
+
+
+    @include mobile {
+        text-align: center;
+    }
+
+    @include desktop {
+        text-align: start;
+    }
 }
 
 .logo__accent {
-    color: var(--raleway-color);
+    color: $raleway-color;
 }
 
 .footer__link--address {
-    color: var(--navbg-color);
+    color: $navgb-color;
 }
 
 .footer__address {
-    display: flex;
-    margin-right: 70px;
+
+    @include tablet {
+        display: flex;
+        justify-content: center;
+    }
+
+    @include desktop {
+        display: inline-flex;
+        margin-right: 70px;
+    }
 }
 
 .footer-icon__title {
@@ -63,12 +92,25 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
-    color: var(--navbg-color);
+    color: $navgb-color;
     margin-bottom: 20px;
+    text-align: center;
+
+    @include desktop {
+        text-align: start;
+    }
 }
 
 .footer-icon {
-    margin-right: 93px;
+
+    @include tablet {
+        // display: flex;
+        // justify-content: center;
+    }
+
+    @include desktop {
+        margin-right: 93px;
+    }
 }
 
 .footer-icon__link {
@@ -78,22 +120,26 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    color: var(--navbg-color);
-    background-color: var(--footer-svg-color);
-    transition: background-color var(--duration) var(--cubic-bezier);
+    color: $navgb-color;
+    background-color: $footer-svg-color;
+    transition: background-color $duration $cubic-bezier;
 
     &:focus,
     &:hover {
-        background-color: var(--raleway-color);
+        background-color: $raleway-color;
     }
 }
 
 .footer-icon__list {
     display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100%;
     gap: 10px;
+    justify-content: center;
+    
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+        margin-bottom: 60px;
+    }
+
 }
 
 .footer-icon__link {
@@ -102,59 +148,77 @@
 
 .footer-input__title {
     display: block;
-    color: var(--navbg-color);
+    color: $navgb-color;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
     margin-bottom: 20px;
+    text-align: center;
+
+    @include desktop {
+        text-align: start;
+    }
 }
 
 .footer-input__form {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
     text-align: center;
+
+    @include desktop {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .footer-input__form input {
-    background-color: var(--bgmain-color);
-    color: var(--navbg-color);
+    background-color: $bgmain-color;
+    color: $navgb-color;
     padding: 15px 16px;
-    width: 358px;
+    width: 450px;
     border-radius: 4px;
-    margin-right: 12px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 
     &::placeholder {
         font-size: 16px;
         line-height: 1.25;
-        color: var(--footer-color);
+        color: $footer-color;
+    }
+
+    @include desktop {
+        margin-right: 12px;
+        width: 358px;
     }
 }
 
 .footer-input__btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     gap: 10px;
     border: transparent;
     padding: 10px 28px;
-    background-color: var(--raleway-color);
-    color: var(--navbg-color);
+    background-color: $raleway-color;
+    color: $navgb-color;
     border-radius: 4px;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
     cursor: pointer;
+    margin-top: 20px;
     width: 200px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transition: background-color var(--duration) var(--cubic-bezier);
+    transition: background-color $duration $cubic-bezier;
 
     &:hover {
-        background-color: var(--btnhover-color);
+        background-color: $btnhover-color;
+    }
+
+    @include desktop {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
     }
 }
 

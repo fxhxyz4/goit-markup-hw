@@ -1,18 +1,41 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    color: var(--a-color);
-    background-color: var(--navbg-color);
-    letter-spacing: 0.03em;
+    font-family: $font;
+    color: $a-color;
+    background-color: $navgb-color;
+    letter-spacing: $letter;
 }
 
 section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+    @include desktop {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
+::selection {
+    color: $navgb-color;
+    background-color: $selection;
+}
+
+::-moz-selection {
+    color: $navgb-color;
+    background-color: $selection;
 }
 
 .container {
-    width: 1200px;
+    width: 480px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
+
+    @include tablet {
+        width: 768px;
+    }
+
+    @include desktop {
+        width: 1200px;
+    }
 }
