@@ -98,13 +98,20 @@
 }
 
 .menu-soc__item {
-    margin-right: 20px;
-    &:last-child {
-        margin-right: 0;
-    }
+    position: relative;
+}
+
+.menu-soc__item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color: rgba(33, 33, 33, 0.2);
 }
 
 .menu-soc__link {
     padding: 22px 0px;
     color: $raleway-color;
+    margin-right: 10px;
+    margin-left: 10px;
 }

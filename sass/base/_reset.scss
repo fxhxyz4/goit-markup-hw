@@ -26,9 +26,13 @@ img {
     display: block;
     user-select: none;
     -moz-user-select: none;
+    -webkit-user-select: none;
+    max-width: 100%;
+    height: auto;
 }
 
 svg {
     user-select: none;
     -moz-user-select: none;
+    -webkit-user-select: none;
 }

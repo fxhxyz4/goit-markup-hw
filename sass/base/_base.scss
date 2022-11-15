@@ -25,11 +25,26 @@ section {
     background-color: $selection;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $navgb-color;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $selection;
+}
+
 .container {
-    width: 480px;
+    width: 100%;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
+    // @include mobile {
+    //     width: 320px;
+    // }
 
     @include tablet {
         width: 768px;

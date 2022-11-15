@@ -1,6 +1,7 @@
 .client__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
 
     @include desktop {
@@ -12,7 +13,7 @@
     flex-basis: calc((100% - 30px) / 2);
 
     @include tablet {
-        flex-basis: calc((100% - 30px) / 4);
+        flex-basis: calc((100% - 2 * 30px) / 3);
     }
 }
 
@@ -38,14 +39,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 210px;
+    width: 100%;
     height: 92px;
     color: $svgcolor;
     border: 1px solid $svgcolor;
     border-radius: 4px;
-    padding: 16px 32px;
     transition: color $duration $cubic-bezier,
     border $duration $cubic-bezier;
+    fill: currentColor;
+
+    &:focus,
+    &:hover {
+        color: $raleway-color;
+        border: 1px solid $raleway-color;
+    }
 
     @include tablet {
         width: 226px;
@@ -55,15 +62,5 @@
         width: 170px;
     }
 
-}
-
-.client__link {
-    fill: currentColor;
-
-    &:focus,
-    &:hover {
-        color: $raleway-color;
-        border: 1px solid $raleway-color;
-    }
 }
 
