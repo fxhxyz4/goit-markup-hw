@@ -68,18 +68,17 @@
 
 .footer__link--address {
     color: $navgb-color;
+    
+    @include desktop {
+        width: 210px;
+    }
 }
 
 .footer__address {
     margin-bottom: 60px;
-
-    @include tablet {
-        display: flex;
-        justify-content: center;
-    }
-
     @include desktop {
-        margin-right: 70px;
+        margin-bottom: 0;
+        margin-right: 93px;
     }
 }
 
@@ -100,7 +99,7 @@
 
 .footer-input {
     @include desktop {
-        margin-left: auto;
+        
     }
 }
 
